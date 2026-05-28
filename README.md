@@ -26,4 +26,5 @@ npm run dev
 
 ## Deployment
 Standard Vite config, so you can just drop the GitHub repository link into Vercel and it will handle the build (`npm run build` -> `dist`) automatically on push.
-```https://cred-web-app-ui.vercel.app/```
+
+[Live Demo](https://cred-web-app-ui.vercel.app/)
