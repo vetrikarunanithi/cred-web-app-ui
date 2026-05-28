@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #0f0f0f;
+  --color-bg-card: rgba(255, 255, 255, 0.05);
+  --color-bg-border: rgba(255, 255, 255, 0.08);
+  --color-accent-mint: #6ee7b7;
+  --color-accent-mint-dark: #34d399;
+  
+  --font-outfit: 'Outfit', sans-serif;
+  --font-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delayed: float-delayed 7s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-glow-slow: glow-slow 8s ease-in-out infinite alternate;
+  --animate-spin-slow: spin 20s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(1deg); }
+  }
+  @keyframes float-delayed {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(15px) rotate(-1deg); }
+  }
+  @keyframes glow-slow {
+    0% { filter: drop-shadow(0 0 15px rgba(110, 231, 183, 0.15)); }
+    100% { filter: drop-shadow(0 0 35px rgba(110, 231, 183, 0.35)); }
+  }
+}
+
+/* Base custom styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f0f0f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #222222;
+    border-radius: 4px;
+    border: 2px solid #0f0f0f;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333333;
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  .glass-card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .glass-card-hover:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(110, 231, 183, 0.3);
+    box-shadow: 0 0 35px rgba(110, 231, 183, 0.12);
+  }
+
+  /* NeoPOP Shadow / Border Styles */
+  .neopop-btn-black {
+    background: #000000;
+    color: #ffffff;
+    border: 1.5px solid #333333;
+    box-shadow: 4px 4px 0px #ffffff;
+    transition: all 0.15s ease-in-out;
+  }
+  .neopop-btn-black:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #ffffff;
+  }
+  .neopop-btn-black:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px #ffffff;
+  }
+
+  .neopop-btn-mint {
+    background: #6ee7b7;
+    color: #000000;
+    border: 1.5px solid #000000;
+    box-shadow: 4px 4px 0px #ffffff;
+    font-weight: 700;
+    transition: all 0.15s ease-in-out;
+  }
+  .neopop-btn-mint:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #ffffff;
+  }
+  .neopop-btn-mint:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px #ffffff;
+  }
+
+  .neopop-card-white {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    box-shadow: 8px 8px 0px #6ee7b7;
+  }
+
+  .neopop-card-black {
+    background: #111111;
+    color: #ffffff;
+    border: 1.5px solid #333333;
+    box-shadow: 8px 8px 0px #1e1e1e;
+  }
+  
+  .glow-text-mint {
+    text-shadow: 0 0 10px rgba(110, 231, 183, 0.4);
+  }
+
+  /* Radial gradient grid overlays */
+  .grid-bg {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center;
+  }
+}
