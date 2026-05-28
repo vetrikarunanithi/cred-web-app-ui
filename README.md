@@ -1,68 +1,28 @@
-# CRED Website Clone — Premium UI
+# CRED Web App UI
 
-A premium, fully responsive, and cinematic CRED landing page clone built in a tight **3-hour timeline**. It replicates the signature dark theme, glassmorphic card grids, custom 3D NeoPOP UI, and premium micro-interactions.
+A clean clone of the CRED landing page focusing on the dark theme, custom 3D NeoPOP buttons, and glassmorphic cards. 
 
-## ⚡ The 3-Hour Challenge
+Had a strict 3-hour limit to build this, so I focused on getting the styling, typography, and scroll animations right without wasting time on asset collection or manual data entry.
 
-This project was built to test speed and precision under a strict 3-hour deadline. To pull this off while keeping the design pixel-perfect, I split the work:
-1. **HTML/CSS Credit Cards**: Instead of spending time downloading, hosting, or linking static images that could look blurry, I coded the premium **PRIME holographic card**, the **SELECT black-and-gold metal card**, and the **rotating 3D gold club coin** entirely using inline SVGs, Tailwind gradients, and Framer Motion logic. They are crisp, scalable, and fully interactive.
-2. **AI-Assisted Mock Data**: Sourced features, testimonials, security guidelines, and statistical metrics from the original CRED application, and used AI to format and structure the mock dataset within minutes to hit the deadline.
+## Sourcing & Assets
+* **CSS & SVGs instead of images:** I didn't want to deal with hosting images or risk broken asset URLs, so the cards (the holographic PRIME card and the gold/black SELECT card) and the 3D gold coin are coded entirely in SVGs and CSS gradients. They look sharp at any resolution and load instantly.
+* **Mock Data:** The text copy and values are modeled after the real CRED app. To stay within the 3-hour window, I used AI to generate and format the structured data arrays in `src/data/mockData.js` so I could focus on components.
+* **Animations:** Set up with Framer Motion (fade reveals, cursor follower, scroll progress bar, 3D tilts, and the cinematic loading screen). The testimonial slider uses Swiper.js.
 
----
+## Stack
+* React + Vite (running on Tailwind v4)
+* Framer Motion
+* Swiper.js
+* React Icons
 
-## 🛠️ Built With
-
-* **React.js + Vite** – Fast local development, lightning HMR, and ultra-small build bundles.
-* **Tailwind CSS v4** – Built using the new CSS-first styling engine, custom `@theme` variables, and utility declarations inside `index.css`.
-* **Framer Motion** – Handles the cinematic text slide-ups, custom trailing cursor, top scroll-progress tracking, 3D stacked card hover shifts, and entrance loader.
-* **Swiper.js** – Powers the reviews carousel with custom creative-effect slide animations.
-* **React Icons** – Modern outline and filled Remix/Font-Awesome icons.
-
----
-
-## 🏗️ Folder Structure
-
-```text
-src/
- ├── assets/          # Base brand icons and vectors
- ├── components/      # UI components (Navbar, Hero, Features, NeoPop, etc.)
- ├── data/            # Local mockData.js (Sourced from original app)
- ├── App.jsx          # App wrapper and entry logic
- ├── index.css        # Tailwind imports, custom fonts, keyframes, utilities
- └── main.jsx         # React root mounter
-```
-
----
-
-## 💻 Getting Started
-
-Follow these steps to run the application locally:
-
-### 1. Clone the repository
+## Local Development
 ```bash
-git clone https://github.com/vetrikarunanithi/cred-web-app-ui.git
-cd cred-web-app-ui
-```
+# install dependencies
+npm i
 
-### 2. Install dependencies
-```bash
-npm install
-```
-
-### 3. Run development server
-```bash
+# run local dev server
 npm run dev
 ```
-Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### 4. Build for production
-```bash
-npm run build
-```
-The compiled, optimized site assets will be generated in the `dist` directory.
-
----
-
-## 🌐 Deployment
-
-This project is fully configured for deployment on **Vercel**. Since Git is connected, importing the repository directly on Vercel's dashboard will automatically configure the build settings and trigger deployments on every `git push`.
+## Deployment
+Standard Vite config, so you can just drop the GitHub repository link into Vercel and it will handle the build (`npm run build` -> `dist`) automatically on push.
