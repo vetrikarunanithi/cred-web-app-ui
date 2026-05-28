@@ -28,7 +28,7 @@ npm run dev
 Standard Vite config, so you can just drop the GitHub repository link into Vercel and it will handle the build (`npm run build` -> `dist`) automatically on push.
 
 ## Live Demo
-[https://docquix-web-app.onrender.com/](https://cred-web-app-ui.vercel.app/)
+[https://cred-web-app-ui.vercel.app/](https://cred-web-app-ui.vercel.app/)
 
 ## Author
 **Vetriselvan Karunanithi**  
